@@ -22,4 +22,4 @@ def handleEvent(json):
     socketio.emit('messageResponse', json)
 
 if __name__ == '__main__':
-    socketio.run(app, debug=True)
+    socketio.run(app, port=int("80"), debug=True)
