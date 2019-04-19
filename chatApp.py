@@ -8,7 +8,7 @@ socketio = SocketIO(app)
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    return('Hello Wolrd!')
+    return render_template('./ChatAppPage.html')
 
 if __name__ == '__main__':
     socketio.run(app, debug=True)
