@@ -10,5 +10,15 @@ socketio = SocketIO(app)
 def index():
     return render_template('./ChatAppPage.html')
 
+@socketio.on('connection')
+def handleEvent(json):
+    print(f'recived: {str(json)}')
+    socketio.emit('logResponse', json)
+
+@socketio.on('sendMessage')
+def handleEvent(json):
+    print(f'recived: {str(json)}')
+    socketio.emit('messageResponse', json)
+
 if __name__ == '__main__':
     socketio.run(app, debug=True)
