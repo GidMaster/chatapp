@@ -10,8 +10,7 @@ pool:
   vmImage: 'Ubuntu-16.04'
 
 variables:
-  dockerId: gidmaster  # Replace with your Docker ID for Docker Hub or the admin user name for the Azure Container Registry
-  imageName: chatapp  # Replace with the name of the image you want to publish
+- group: build-image
 
 steps:
 - script: |
