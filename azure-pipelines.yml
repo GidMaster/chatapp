@@ -32,7 +32,7 @@ steps:
     command: push
     azureSubscriptionEndpoint: $(azureSubscriptionEndpoint)
     azureContainerRegistry: $(azureContainerRegistry)
-    imageName: $(Build.Repository.Name)
+    imageName: $(Build.Repository.Name):$(Build.BuildId)
 - task: Docker@1
   displayName: Container registry logout
   inputs:
