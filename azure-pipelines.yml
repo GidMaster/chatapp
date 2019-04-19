@@ -10,10 +10,6 @@ pool:
   vmImage: 'Ubuntu-16.04'
 
 variables:
-- group: build-image
-
-
-variables:
   - group: build-image
 steps:
 - task: Docker@1
