@@ -6,4 +6,5 @@ COPY chatApp.py /app
 WORKDIR /app
 ENV APP_SECRET_KEY=secret
 RUN chmod +x ./chatApp.py
+EXPOSE 80
 ENTRYPOINT [ "python", "./chatApp.py" ]
