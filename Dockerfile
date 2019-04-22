@@ -7,4 +7,4 @@ WORKDIR /app
 ENV APP_SECRET_KEY=secret
 RUN chmod +x ./chatApp.py
 EXPOSE 80
-CMD [ "python", "./chatApp.py" ]
+CMD python ./chatApp.py
